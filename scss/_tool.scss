@@ -1,0 +1,214 @@
+.bg-white {
+  background: #fff;
+  border-radius: 160px;
+  color: $black100;
+  a {
+    color: $black100;
+  }
+
+  .container {
+    padding: 10rem 0.75rem;
+  }
+}
+.tool_title {
+  text-align: center;
+}
+.tool_search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: $black20;
+  border-radius: 16px;
+  padding: 1.25rem 2.5rem;
+  color: $black60;
+  .material-icons {
+    margin-right: 0.75rem;
+  }
+
+  input {
+    border: none;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.tool_filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tool_filter_all {
+  position: relative;
+  .icon-white {
+    color: $primary;
+    background: $black100;
+    padding: 2px;
+  }
+}
+.tool_filter_all_menu {
+  display: none;
+  text-align: left;
+  position: absolute;
+  left: 0;
+  width: 240px;
+  padding: 1rem 0;
+  margin-top: 4px;
+  background-color: $primary;
+  border-radius: 16px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  &.show {
+    display: block;
+  }
+  p {
+    margin: 0.25rem 2.5rem;
+    cursor: default;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: $black60;
+    &:not(:first-of-type) {
+      border-top: 1px solid $black20;
+      padding-top: 1rem;
+      margin-top: 1rem;
+    }
+  }
+  &_ai,
+  &_type {
+    padding: 0.25rem 2.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    &:hover {
+      background-color: $black20;
+    }
+    .check-icon {
+      display: none;
+    }
+    &.active .check-icon {
+      display: block;
+    }
+  }
+}
+
+.tool_filter_type {
+  display: flex;
+  a {
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    color: $black60;
+    border-radius: 16px;
+    transition: 0.3s;
+  }
+  a:hover,
+  .filter-active {
+    background-color: $black20;
+    color: $black100;
+    font-weight: 700;
+  }
+}
+.tool_filter_time {
+  position: relative;
+  &_menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    padding: 1rem 0;
+    margin-top: 4px;
+    background-color: $primary;
+    border-radius: 16px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    &.show {
+      display: block;
+    }
+    li {
+      padding: 0.25rem 2.5rem;
+      cursor: pointer;
+      &:hover {
+        background-color: $black20;
+      }
+    }
+  }
+}
+
+.btn-tool {
+  border: 1px solid $black20;
+  white-space: nowrap; //文字不換行
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    border: 1px solid $black100;
+  }
+  .material-icons {
+    margin-left: 0.75rem;
+  }
+  .icon-white {
+    background-color: $black100;
+    color: $primary;
+    padding: 2px;
+    border-radius: 2px;
+  }
+}
+
+.tool_card {
+  overflow: hidden; //讓圓角出來
+  border: 1px solid $black20;
+
+  &_img {
+    overflow: hidden; //防下方超過
+
+    img {
+      transition: 0.5s;
+      vertical-align: middle;
+      &:hover {
+        scale: 1.2;
+      }
+    }
+  }
+
+  &_body {
+    padding: 1.25rem 2rem;
+    flex-grow: 1;
+    h3 {
+      margin-bottom: 0.75rem;
+    }
+  }
+  &_ai,
+  &_tag {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem 2rem;
+    border-top: 1px solid $black20;
+  }
+}
+
+.tool_page {
+  margin-left: auto;
+  display: flex;
+  column-gap: 0.25rem;
+  width: 308px;
+
+  a {
+    width: 48px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 16px;
+    transition: 0.3s;
+  }
+  .page-active,
+  a:hover {
+    background: $black100;
+    color: $primary;
+  }
+  .page-active {
+    pointer-events: none;
+  }
+  .material-icons {
+    vertical-align: top;
+  }
+}
