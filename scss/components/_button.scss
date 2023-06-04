@@ -1,0 +1,15 @@
+.btn {
+  border: 1px solid $primary;
+  border-radius: 16px;
+  padding: 1.25rem 2.5rem;
+  background: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+  &:hover {
+    background: #fff;
+    color: $black100;
+  }
+  &:active {
+    box-shadow: 0 0 3px 5px $black40;
+  }
+}

@@ -23,12 +23,13 @@ function getData({ type, sort, page, search }) {
     // console.log(response.data);
 
     worksData = response.data.ai_works.data;
-    pageData = response.data.ai_works.page;
+    pagesData = response.data.ai_works.page;
 
     console.log("worksData", worksData);
     console.log("pageData", pagesData);
 
     renderWorks();
+    renderPages();
   });
 }
 
@@ -70,7 +71,6 @@ function renderWorks() {
 function changePage(pagesData) {
   const pageLinks = document.querySelectorAll("a.pageLink");
   let pageId = "";
-
   pageLinks.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault(); //取消預設行為(連結)
@@ -87,18 +87,71 @@ function changePage(pagesData) {
   });
 }
 
-//分頁渲染至畫面
+// *** 分頁渲染至畫面 ***
 function renderPages() {
   let pageStr = "";
-
   for (let i = 1; i <= pagesData.total_pages; i++) {
-    pageStr += /*html*/ `<li><a href="#" class=" pageLink ${
+    pageStr += /*html*/ `<li>
+    <a href="#" class="pageLink ${
       pagesData.current_page == i ? "page-active" : ""
-    }" data-page="${i}">${i}</a></li>`;
+    }" data-page="${i}">${i}</a>
+    </li>`;
   }
+
+  if (pagesData.has_next) {
+    pageStr += /*html*/ `<li>
+    <a href="#" class="pageLink">
+      <span class="material-icons icon-s"> keyboard_arrow_right </span>
+    </a>
+  </li>`;
+  }
+  pagination.innerHTML = pageStr;
+  changePage(pagesData);
 }
 
-changePage(pagesData);
+// ---------- 排序、篩選----------
+// *** 切換作品排序 ***
+const desc = document.querySelector("#desc");
+const asc = document.querySelector("#asc");
+
+// 由新到舊 -> sort = 0
+desc.addEventListener("click", (e) => {
+  e.preventDefault();
+  data.sort = 0;
+  getData(data);
+});
+
+//由舊到新 -> sort = 1
+asc.addEventListener("click", (e) => {
+  e.preventDefault();
+  data.sort = 1;
+  getData(data);
+});
+
+// *** 切換作品類型 ***
+const filterBtns = document.querySelectorAll("#filterBtn");
+filterBtns.forEach((item) => {
+  item.addEventListener("click", (e) => {
+    e.preventDefault();
+    if (item.textContent === "全部") {
+      data.type = "";
+    } else {
+      data.type = item.textContent;
+    }
+    getData(data);
+  });
+});
+
+//搜尋
+const search = document.querySelector("#search");
+search.addEventListener("keydown", (e) => {
+  //按下 enter 時
+  if (e.keyCode === 13) {
+    data.search = search.Value;
+    data.page = 1;
+    getData(data);
+  }
+});
 
 // ---------- 動畫 ----------
 // *** 輪播動畫 ***
@@ -135,12 +188,13 @@ $(document).ready(() => {
 // *** 收合篩選選單-全部篩選 ***
 let tempFilterName = []; // ai 加入 [0]、type 加入 [1]，最後用 join("、") 連接
 let filterName;
-// 選單出現、消失
+
+// 篩選選單 - 出現、消失
 $(document).ready(() => {
   $(".tool_filter_all_btn").click(() => {
     $(".tool_filter_all_menu").toggleClass("show");
   });
-  // 篩選 Ai模型
+  // 篩選選單 - Ai模型
   $(".tool_filter_all_menu_ai").click(function () {
     // filetr-icon 變黑底白字
     $(".tool_filter_all_btn .material-icons").addClass("icon-white");
@@ -154,7 +208,7 @@ $(document).ready(() => {
     // console.log(filterName);
   });
 
-  // 篩選 類型
+  // 篩選選單 - 類型
   $(".tool_filter_all_menu_type").click(function () {
     // filetr-icon 變黑底白字
     $(".tool_filter_all_btn .material-icons").addClass("icon-white");
@@ -166,6 +220,14 @@ $(document).ready(() => {
     filterName = tempFilterName.filter((x) => x !== undefined).join("、"); // 若沒有選 ai 篩選，要去除 [0] 沒有值，避免出現 "、"
     $(".tool_filter_all_btn_txt").text(filterName);
     // console.log(filterName);
+  });
+});
+
+//切換作品類型
+$(document).ready(() => {
+  $("#filterBtn a").click(() => {
+    $("#filterBtn a").removeClass(".active");
+    $(this).addClass(".active");
   });
 });
 

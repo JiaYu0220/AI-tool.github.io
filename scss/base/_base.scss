@@ -1,0 +1,65 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background-color: $black100;
+  color: $primary;
+}
+a {
+  text-decoration: none;
+  color: $primary;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+button {
+  transition: 0.3s;
+  cursor: pointer;
+}
+a:hover {
+  color: $black40;
+}
+
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+}
+
+.logo {
+  max-width: 245px;
+}
+//margin
+.mb-1t {
+  margin-bottom: 1.5rem; //24px //tenth = 0.1
+}
+.mb-2t {
+  margin-bottom: 2.5rem; //40px
+}
+.mb-5 {
+  margin-bottom: 5rem; //80px
+}
+.mb-6h {
+  margin-bottom: 6.25rem; //100px //hundredth = 0.01
+}
+.mb-10 {
+  margin-bottom: 10rem; //160px
+}
+.mb-15 {
+  margin-bottom: 15rem; //240px
+}
+.pt-10 {
+  padding-top: 10rem;
+}
+
+.material-icons {
+  vertical-align: sub;
+}

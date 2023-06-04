@@ -1,23 +1,5 @@
 // 開始
-.banner_animation {
-  text-align: right;
-  overflow: hidden;
-  img {
-    width: 180px;
-  }
-}
-.slideOutIn {
-  transform: translateY(110%);
-  &:nth-of-type(3) {
-    animation: slideOutIn 5s infinite;
-  }
-  &:nth-of-type(2) {
-    animation: slideOutIn 5s 0.2s infinite;
-  }
-  &:nth-of-type(1) {
-    animation: slideOutIn 5s 0.4s infinite;
-  }
-}
+
 // 服務
 .service_txt {
   display: flex;

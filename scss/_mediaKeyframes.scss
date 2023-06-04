@@ -187,20 +187,3 @@
     }
   }
 }
-@keyframes slideOutIn {
-  0% {
-    transform: translateY(110%);
-  }
-  30% {
-    transform: translateY(0%);
-  }
-  60% {
-    transform: translateY(0%);
-  }
-  70% {
-    transform: translateY(-110%);
-  }
-  100% {
-    transform: translateY(-110%);
-  }
-}

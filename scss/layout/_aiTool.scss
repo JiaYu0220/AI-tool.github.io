@@ -19,13 +19,15 @@
   align-items: center;
   background: $black20;
   border-radius: 16px;
-  padding: 1.25rem 2.5rem;
+  padding: 0 2.5rem;
   color: $black60;
   .material-icons {
     margin-right: 0.75rem;
   }
 
   input {
+    width: 100%;
+    padding: 1.25rem 0;
     border: none;
     background-color: transparent;
 
@@ -105,10 +107,13 @@
     transition: 0.3s;
   }
   a:hover,
-  .filter-active {
+  .active {
     background-color: $black20;
     color: $black100;
     font-weight: 700;
+  }
+  .active {
+    pointer-events: none;
   }
 }
 .tool_filter_time {

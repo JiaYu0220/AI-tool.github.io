@@ -25,7 +25,7 @@
           <a href="#"
             ><img
               src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png"
-              alt="logo"
+              alt="AI 工具王"
           /></a>
         </h1>
         <ul class="header_nav text-m">
@@ -306,9 +306,14 @@
           這些超酷的應用，都來自 AI工具王
         </h2>
         <!-- 搜尋 -->
-        <form action="" class="tool_search mb-1t mb-sm-1">
+        <form action="GET" class="tool_search mb-1t mb-sm-1">
           <span class="material-icons icon-m"> search </span
-          ><input class="text-m" type="search" placeholder="輸入關鍵字搜尋" />
+          ><input
+            class="text-m"
+            id="#search"
+            type="search"
+            placeholder="輸入關鍵字搜尋"
+          />
         </form>
         <!-- 篩選 -->
         <div class="tool_filter mb-2t mb-sm-3">
@@ -371,13 +376,15 @@
             </ul>
           </div>
           <ul class="tool_filter_type">
-            <li><a href="#" class="filter-active text-m">全部</a></li>
-            <li><a class="text-m" href="#">聊天</a></li>
-            <li><a class="text-m" href="#">影像辨識</a></li>
-            <li><a class="text-m" href="#">翻譯</a></li>
-            <li><a class="text-m" href="#">行銷</a></li>
-            <li><a class="text-m" href="#">客服</a></li>
-            <li><a class="text-m" href="#">生產力</a></li>
+            <li id="filterBtn">
+              <a href="#" class="active text-m">全部</a>
+            </li>
+            <li id="filterBtn"><a href="#" class="text-m">聊天</a></li>
+            <li id="filterBtn"><a href="#" class="text-m">影像辨識</a></li>
+            <li id="filterBtn"><a href="#" class="text-m">翻譯</a></li>
+            <li id="filterBtn"><a href="#" class="text-m">行銷</a></li>
+            <li id="filterBtn"><a href="#" class="text-m">客服</a></li>
+            <li id="filterBtn"><a href="#" class="text-m">生產力</a></li>
           </ul>
           <div class="tool_filter_time">
             <button class="btn btn-tool text-m tool_filter_time_btn">
@@ -385,8 +392,8 @@
               ><span class="material-icons icon-s"> keyboard_arrow_down </span>
             </button>
             <ul class="tool_filter_time_menu text-m">
-              <li class="new-to-old">由新到舊</li>
-              <li class="new-to-old">由舊到新</li>
+              <li class="new-to-old" id="desc">由新到舊</li>
+              <li class="new-to-old" id="asc">由舊到新</li>
             </ul>
           </div>
         </div>
@@ -523,18 +530,16 @@
         </ul>
 
         <ul class="tool_page text-s-bold" id="pagination">
-          <li><a href="" class="page-active pageLink">1</a></li>
+          <!-- <li><a href="" class="page-active pageLink">1</a></li>
           <li><a href="" class="pageLink">2</a></li>
           <li><a href="" class="pageLink">3</a></li>
           <li><a href="" class="pageLink">4</a></li>
           <li><a href="" class="pageLink">5</a></li>
           <li>
-            <a href=""
-              ><span class="material-icons icon-s">
-                keyboard_arrow_right
-              </span></a
-            >
-          </li>
+            <a href="" class="pageLink">
+              <span class="material-icons icon-s"> keyboard_arrow_right </span>
+            </a>
+          </li> -->
         </ul>
       </div>
     </div>
@@ -546,9 +551,10 @@
           <h2 class="title-m mb-2t title-sm-m mb-sm-2">
             現在就來建立屬於你的服務吧
           </h2>
-          <a class="btn title-xs" href="#"
-            >開始使用<span class="material-icons icon-m"> call_made </span></a
-          >
+          <a class="btn title-xs" href="#">
+            開始使用
+            <span class="material-icons icon-m"> call_made </span>
+          </a>
         </section>
 
         <!-- layout -->

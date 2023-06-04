@@ -1,9 +1,19 @@
+// utils
 @import "variables";
+// base
 @import "reset";
 @import "base";
-
-@import "layout";
+@import "fontStyle";
+// layout
+@import "footer";
+@import "header";
+@import "aiTool";
+//page
 @import "home";
-@import "tool";
 @import "pricing";
+//components
+@import "bannerAnim";
+@import "button";
+@import "card";
+
 @import "mediaKeyframes";

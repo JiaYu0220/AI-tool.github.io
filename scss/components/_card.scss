@@ -1,0 +1,14 @@
+.card-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  min-width: 351px;
+  border-radius: 16px;
+}
