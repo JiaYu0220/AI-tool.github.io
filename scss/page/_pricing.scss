@@ -1,6 +1,9 @@
 .pricing_banner_subtitle {
   width: 50%;
   margin-left: auto;
+  @include pad {
+    width: 73%;
+  }
 }
 
 .card-price {
@@ -57,6 +60,9 @@
       margin-bottom: 1.5rem;
     }
   }
+  @include mobile {
+    flex-direction: column;
+  }
 }
 
 // 常見問題
@@ -68,6 +74,10 @@
   }
   ul {
     flex-grow: 1;
+  }
+
+  @include mobile {
+    flex-direction: column;
   }
 }
 .question_item {

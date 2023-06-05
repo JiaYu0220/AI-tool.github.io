@@ -1,8 +1,15 @@
 .banner_animation {
   text-align: right;
   overflow: hidden;
+  white-space: nowrap;
   img {
     width: 180px;
+  }
+  @include pad {
+    text-align: center;
+    img {
+      max-width: 33%;
+    }
   }
 }
 

@@ -1,19 +1,19 @@
-// utils
-@import "variables";
-// base
-@import "reset";
-@import "base";
-@import "fontStyle";
-// layout
-@import "footer";
-@import "header";
-@import "aiTool";
-//page
-@import "home";
-@import "pricing";
-//components
-@import "bannerAnim";
-@import "button";
-@import "card";
+@import "./utils/variables";
+@import "./utils/mixins";
 
-@import "mediaKeyframes";
+@import "./base/reset";
+@import "./base/base";
+@import "./base/typography";
+
+@import "./utils/utilities";
+
+@import "./layout/footer";
+@import "./layout/header";
+@import "./layout/tool";
+
+@import "./page/home";
+@import "./page/pricing";
+
+@import "./components/bannerAnim";
+@import "./components/button";
+@import "./components/card";

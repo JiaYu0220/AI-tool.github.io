@@ -15,6 +15,10 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="./css/all.css" />
   </head>
   <body>
@@ -35,15 +39,25 @@
           <li class="header_nav_item"><p>定價</p></li>
         </ul>
         <!-- 手機板才出現 -->
-        <button class="header_menu">
-          <span class="material-icons"> menu </span>
-        </button>
+        <div class="header_mobile">
+          <button class="header_mobile_btn" type="button">
+            <span class="material-icons"> menu </span>
+          </button>
+          <ul class="header_mobile_menu">
+            <li>
+              <a class="header_mobile_menu_item" href="./home.html">首頁</a>
+            </li>
+            <li>
+              <a class="header_mobile_menu_item" href="./price.html">定價</a>
+            </li>
+          </ul>
+        </div>
       </div>
 
       <!-- 開始 -->
       <div class="main">
         <section class="mb-10 mb-sm-7t">
-          <h2 class="mb-2t title-xl title-sm-l mb-sm-8">
+          <h2 class="mb-5 title-xl title-sm-l mb-sm-4">
             用多少，<br />
             付多少。
           </h2>
@@ -180,26 +194,35 @@
         </div>
       </div>
     </div>
-    <!-- 工具 -->
+
+    <!-- ai工具 -->
     <div class="bg-white">
-      <div class="container">
+      <div class="container mb-10">
         <h2 class="tool_title title-l mb-5 mb-sm-2 title-sm-m">
           這些超酷的應用，都來自 AI工具王
         </h2>
         <!-- 搜尋 -->
-        <form action="" class="tool_search mb-1t mb-sm-1">
+        <form action="GET" class="tool_search mb-1t mb-sm-1">
           <span class="material-icons icon-m"> search </span
-          ><input class="text-m" type="search" placeholder="輸入關鍵字搜尋" />
+          ><input
+            class="text-m"
+            id="search"
+            type="search"
+            placeholder="輸入關鍵字搜尋"
+          />
         </form>
         <!-- 篩選 -->
         <div class="tool_filter mb-2t mb-sm-3">
           <div class="tool_filter_all">
-            <button class="btn btn-tool tool_filter_all_btn mb-sm-1">
+            <button
+              class="btn btn-tool tool_filter_all_btn mb-sm-1"
+              type="button"
+            >
               <span class="tool_filter_all_btn_txt text-m">篩選</span
               ><span class="material-icons icon-s"> filter_alt </span>
             </button>
             <ul class="tool_filter_all_menu text-m">
-              <p>AI 模型</p>
+              <li class="tool_filter_all_menu_title">AI 模型</li>
               <li class="tool_filter_all_menu_ai">
                 <span class="filter_name">所有模型</span
                 ><span class="material-icons check-icon icon-s"> check </span>
@@ -220,60 +243,78 @@
                 <span class="filter_name">昊昊</span>
                 <span class="material-icons check-icon icon-s"> check </span>
               </li>
-              <p>類型</p>
+              <li class="tool_filter_all_menu_title">類型</li>
               <li class="tool_filter_all_menu_type">
                 <span class="filter_name">所有類型</span
                 ><span class="material-icons check-icon icon-s"> check </span>
               </li>
               <li class="tool_filter_all_menu_type">
-                <span class="filter_name">聊天</span
+                <span class="filter_name">問答服務</span
                 ><span class="material-icons check-icon icon-s"> check </span>
               </li>
               <li class="tool_filter_all_menu_type">
-                <span class="filter_name">影像辨識</span
+                <span class="filter_name">虛擬客服</span
                 ><span class="material-icons check-icon icon-s"> check </span>
               </li>
               <li class="tool_filter_all_menu_type">
-                <span class="filter_name">翻譯</span
+                <span class="filter_name">生活應用</span
                 ><span class="material-icons check-icon icon-s"> check </span>
               </li>
               <li class="tool_filter_all_menu_type">
-                <span class="filter_name">行銷</span
+                <span class="filter_name">程式知識</span
                 ><span class="material-icons check-icon icon-s"> check </span>
               </li>
               <li class="tool_filter_all_menu_type">
-                <span class="filter_name">客服</span
+                <span class="filter_name">翻譯助手</span
                 ><span class="material-icons check-icon icon-s"> check </span>
               </li>
               <li class="tool_filter_all_menu_type">
-                <span class="filter_name">生產力</span
+                <span class="filter_name">行銷文案</span
                 ><span class="material-icons check-icon icon-s"> check </span>
               </li>
             </ul>
           </div>
           <ul class="tool_filter_type">
-            <li><a href="#" class="filter-active text-m">全部</a></li>
-            <li><a class="text-m" href="#">聊天</a></li>
-            <li><a class="text-m" href="#">影像辨識</a></li>
-            <li><a class="text-m" href="#">翻譯</a></li>
-            <li><a class="text-m" href="#">行銷</a></li>
-            <li><a class="text-m" href="#">客服</a></li>
-            <li><a class="text-m" href="#">生產力</a></li>
+            <li>
+              <a href="#" class="filterBtn active text-m">全部</a>
+            </li>
+            <li><a href="#" class="filterBtn text-m">問答服務</a></li>
+            <li><a href="#" class="filterBtn text-m">虛擬客服</a></li>
+            <li><a href="#" class="filterBtn text-m">生活應用</a></li>
+            <li><a href="#" class="filterBtn text-m">程式知識</a></li>
+            <li><a href="#" class="filterBtn text-m">翻譯助手</a></li>
+            <li><a href="#" class="filterBtn text-m">行銷文案</a></li>
           </ul>
-          <div class="tool_filter_time">
-            <button class="btn btn-tool text-m tool_filter_time_btn">
-              <span class="tool_filter_time_btn_txt">由新到舊</span
+          <div class="tool_filter_sort">
+            <select
+              class="btn btn-tool text-m tool_filter_sort_menu mb-sm-1"
+              name="sort"
+            >
+              <option class="new-to-old" id="desc" value="由新到舊" selected>
+                由新到舊
+              </option>
+              <option class="new-to-old" id="asc" value="由舊到新">
+                由舊到新
+              </option>
+              <!-- <span class="tool_filter_sort_btn_txt">由新到舊</span
+              ><span class="material-icons icon-s"> keyboard_arrow_down </span> -->
+            </select>
+            <!-- <button
+              class="btn btn-tool text-m tool_filter_sort_btn"
+              type="button"
+            >
+              <span class="tool_filter_sort_btn_txt">由新到舊</span
               ><span class="material-icons icon-s"> keyboard_arrow_down </span>
             </button>
-            <ul class="tool_filter_time_menu text-m">
-              <li class="new-to-old">由新到舊</li>
-              <li class="new-to-old">由舊到新</li>
-            </ul>
+            <ul class="tool_filter_sort_menu text-m">
+              <li class="new-to-old" id="desc">由新到舊</li>
+              <li class="new-to-old" id="asc">由舊到新</li>
+            </ul> -->
           </div>
         </div>
 
-        <ul class="card-group mb-2t mb-sm-2">
-          <li class="tool_card card">
+        <ul class="card-group mb-2t mb-sm-2" id="aiList">
+          <!-- <li class="tool_card card">
             <div class="tool_card_img">
               <img
                 src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/tool1.png"
@@ -292,9 +333,7 @@
             </div>
             <div class="tool_card_tag">
               <p class="text-m">#聊天</p>
-              <a href="#" target="_blank"
-                ><span class="material-icons icon-m"> share </span></a
-              >
+              <a href="#" target="_blank"><span class="material-icons icon-m"> share </span></a>
             </div>
           </li>
           <li class="tool_card card">
@@ -314,9 +353,7 @@
             </div>
             <div class="tool_card_tag">
               <p class="text-m">#影像辨識</p>
-              <a href="#" target="_blank"
-                ><span class="material-icons icon-m"> share </span></a
-              >
+              <a href="#" target="_blank"><span class="material-icons icon-m"> share </span></a>
             </div>
           </li>
           <li class="tool_card card">
@@ -338,9 +375,7 @@
             </div>
             <div class="tool_card_tag">
               <p class="text-m">#翻譯</p>
-              <a href="#" target="_blank"
-                ><span class="material-icons icon-m"> share </span></a
-              >
+              <a href="#" target="_blank"><span class="material-icons icon-m"> share </span></a>
             </div>
           </li>
           <li class="tool_card card">
@@ -362,9 +397,7 @@
             </div>
             <div class="tool_card_tag">
               <p class="text-m">#行銷</p>
-              <a href="#" target="_blank"
-                ><span class="material-icons icon-m"> share </span></a
-              >
+              <a href="#" target="_blank"><span class="material-icons icon-m"> share </span></a>
             </div>
           </li>
           <li class="tool_card card">
@@ -384,9 +417,7 @@
             </div>
             <div class="tool_card_tag">
               <p class="text-m">#客服</p>
-              <a href="#" target="_blank"
-                ><span class="material-icons icon-m"> share </span></a
-              >
+              <a href="#" target="_blank"><span class="material-icons icon-m"> share </span></a>
             </div>
           </li>
           <li class="tool_card card">
@@ -408,32 +439,28 @@
             </div>
             <div class="tool_card_tag">
               <p class="text-m">#生產力</p>
-              <a href="#" target="_blank"
-                ><span class="material-icons icon-m"> share </span></a
-              >
+              <a href="#" target="_blank"><span class="material-icons icon-m"> share </span></a>
             </div>
-          </li>
+          </li> -->
         </ul>
 
-        <ul class="tool_page text-s-bold">
-          <li><a href="#" class="page-active">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
+        <ul class="tool_page text-s-bold" id="pagination">
+          <!-- <li><a href="" class="page-active pageLink">1</a></li>
+          <li><a href="" class="pageLink">2</a></li>
+          <li><a href="" class="pageLink">3</a></li>
+          <li><a href="" class="pageLink">4</a></li>
+          <li><a href="" class="pageLink">5</a></li>
           <li>
-            <a href=""
-              ><span class="material-icons icon-s">
-                keyboard_arrow_right
-              </span></a
-            >
-          </li>
+            <a href="" class="pageLink">
+              <span class="material-icons icon-s"> keyboard_arrow_right </span>
+            </a>
+          </li> -->
         </ul>
       </div>
     </div>
 
     <!-- footer -->
-    <div class="container pt-10">
+    <div class="container">
       <div class="footer">
         <!-- QA -->
         <section class="question mb-10 mb-sm-7t">
@@ -524,13 +551,13 @@
           </div>
         </section>
         <section class="footer_bottom">
-          <div class="text-m-bold mb-sm-2">AI工具王 &copy; 2023</div>
+          <h5 class="text-m-bold mb-sm-2">AI工具王 &copy; 2023</h5>
           <ul class="social text-m-bold">
             <li><a href="#">Facebook</a></li>
             <li><a href="#">Twitter</a></li>
             <li><a href="#">Instagram</a></li>
           </ul>
-          <button class="toTop text-m-bold mb-sm-2">
+          <button class="toTop text-m-bold mb-sm-2" type="button">
             Back to top<span class="material-icons icon-s"> arrow_upward </span>
           </button>
         </section>
@@ -542,6 +569,7 @@
       integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="./js/app.js"></script>
   </body>
 </html>

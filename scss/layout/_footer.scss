@@ -7,6 +7,10 @@
   p {
     margin-bottom: 0.5rem;
   }
+
+  @include mobile {
+    flex-direction: column-reverse;
+  }
 }
 
 .sitemap-cover {
@@ -36,6 +40,14 @@
     }
     .material-icons {
       margin-left: 0.75rem;
+    }
+  }
+
+  @include mobile {
+    flex-wrap: wrap;
+    .social {
+      order: 3;
+      margin-left: 0;
     }
   }
 }

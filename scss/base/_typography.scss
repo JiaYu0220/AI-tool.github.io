@@ -53,14 +53,20 @@
   font-weight: 900;
   line-height: 1.2;
 }
-
-//icon
-.icon-s {
-  font-size: 1rem;
-}
-.icon-m {
-  font-size: 1.5rem;
-}
-.icon-l {
-  font-size: 5rem;
+@include mobile {
+  .text-sm-m {
+    font-size: 1rem;
+  }
+  .title-sm-xs {
+    font-size: 1.25rem; //20px
+  }
+  .title-sm-s {
+    font-size: 1.75rem; //28px
+  }
+  .title-sm-m {
+    font-size: 2rem;
+  }
+  .title-sm-l {
+    font-size: 3rem;
+  }
 }

@@ -1,5 +1,9 @@
 // 開始
-
+.banner_title {
+  @include mobile {
+    width: 73%;
+  }
+}
 // 服務
 .service_txt {
   display: flex;
@@ -8,6 +12,15 @@
   h3 {
     width: 66%;
     text-align: justify;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    h3 {
+      br {
+        display: none;
+      }
+    }
   }
 }
 
@@ -72,12 +85,24 @@
     max-width: 160px;
     height: 40px;
   }
+
+  @include mobile {
+    &_item {
+      &:first-of-type {
+        margin-left: -5rem;
+      }
+    }
+  }
 }
 
 // 推薦
+
 .recommend_card {
   background: rgba(255, 255, 255, 0.08);
   padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
 
   .material-icons {
     margin-bottom: 1.25rem;
@@ -85,6 +110,7 @@
   &_txt {
     padding-bottom: 3.5rem;
     flex-grow: 1;
+    color: $black20;
   }
   &_person {
     display: flex;
@@ -93,8 +119,28 @@
     margin-top: auto;
   }
 }
-.recommend_indicator {
-  display: none;
+.swiper {
+  width: 100%;
+  padding-bottom: 24px;
+}
+.swiper-slide {
+  height: auto;
+}
+.swiper-pagination.swiper-pagination-bullets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+}
+.swiper-pagination-bullet {
+  background-color: #525252;
+  opacity: 1;
+
+  &-active {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+  }
 }
 
 // footer
