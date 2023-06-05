@@ -1,9 +1,19 @@
-@import "variables";
-@import "reset";
-@import "base";
+@import "./utils/variables";
+@import "./utils/mixins";
 
-@import "layout";
-@import "home";
-@import "tool";
-@import "pricing";
-@import "mediaKeyframes";
+@import "./base/reset";
+@import "./base/base";
+@import "./base/typography";
+
+@import "./utils/utilities";
+
+@import "./layout/footer";
+@import "./layout/header";
+@import "./layout/tool";
+
+@import "./page/home";
+@import "./page/pricing";
+
+@import "./components/bannerAnim";
+@import "./components/button";
+@import "./components/card";

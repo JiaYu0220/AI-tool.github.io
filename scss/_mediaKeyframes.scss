@@ -1,206 +1,168 @@
-@media (max-width: 910px) {
-  // ai tool篩選
-  .tool_filter_type {
-    order: 3;
-    margin: 0 auto;
-    overflow-x: auto;
-    /* 隱藏 x 軸 */
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    &::-webkit-scrollbar {
-      display: none;
-    }
-    /* Hide scrollbar for IE, Edge and Firefox */
-    & {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
-    }
-    li {
-      flex-shrink: 0;
-    }
-  }
-}
+// @media (max-width: 768px) {
+//   // ai tool篩選
+//   .tool_filter {
+//     flex-wrap: wrap;
+//   }
+//   .tool_filter_type {
+//     order: 3;
+//     margin: 0 auto;
+//     margin-top: 1rem;
+//     overflow-x: auto;
+//     /* 隱藏 x 軸 */
+//     /* Hide scrollbar for Chrome, Safari and Opera */
+//     &::-webkit-scrollbar {
+//       display: none;
+//     }
+//     /* Hide scrollbar for IE, Edge and Firefox */
+//     & {
+//       -ms-overflow-style: none; /* IE and Edge */
+//       scrollbar-width: none; /* Firefox */
+//     }
+//     li {
+//       flex-shrink: 0;
+//     }
+//   }
+// }
 
-@media (max-width: 575px) {
-  // base
-  .width-sm {
-    width: 73%;
-  }
-  .mb-sm-1 {
-    margin-bottom: 1rem;
-  }
-  .mb-sm-1t {
-    margin-bottom: 1.5rem;
-  }
-  .mb-sm-2 {
-    margin-bottom: 2rem;
-  }
-  .mb-sm-3 {
-    margin-bottom: 3rem;
-  }
-  .mb-sm-7t {
-    margin-bottom: 7.5rem; //120px
-  }
-  .mb-sm-8 {
-    margin-bottom: 8rem; //128px
-  }
-  .mb-sm-11 {
-    margin-bottom: 11.25rem; //180px
-  }
-  .mb-sm-16 {
-    margin-bottom: 16.25rem; //260px
-  }
-  .text-sm-m {
-    font-size: 1rem;
-  }
-  .title-sm-xs {
-    font-size: 1.25rem; //20px
-  }
-  .title-sm-s {
-    font-size: 1.75rem; //28px
-  }
-  .title-sm-m {
-    font-size: 2rem;
-  }
-  .title-sm-l {
-    font-size: 3rem;
-  }
-  .card-group {
-    gap: 0.75rem;
-  }
-  .logo {
-    width: 150px;
-  }
+// @media (max-width: 375px) {
+// // base
+// .width-sm {
+//   width: 73%;
+// }
+// .mb-sm-1 {
+//   margin-bottom: 1rem;
+// }
+// .mb-sm-1t {
+//   margin-bottom: 1.5rem;
+// }
+// .mb-sm-2 {
+//   margin-bottom: 2rem;
+// }
+// .mb-sm-3 {
+//   margin-bottom: 3rem;
+// }
+// .mb-sm-7t {
+//   margin-bottom: 7.5rem; //120px
+// }
+// .mb-sm-8 {
+//   margin-bottom: 8rem; //128px
+// }
+// .mb-sm-11 {
+//   margin-bottom: 11.25rem; //180px
+// }
+// .mb-sm-16 {
+//   margin-bottom: 16.25rem; //260px
+// }
+// .text-sm-m {
+//   font-size: 1rem;
+// }
+// .title-sm-xs {
+//   font-size: 1.25rem; //20px
+// }
+// .title-sm-s {
+//   font-size: 1.75rem; //28px
+// }
+// .title-sm-m {
+//   font-size: 2rem;
+// }
+// .title-sm-l {
+//   font-size: 3rem;
+// }
+// .card-group {
+//   gap: 0.75rem;
+// }
+// .logo {
+//   width: 150px;
+// }
 
-  // header
-  .header {
-    padding: 1.75rem 0;
-    &_menu {
-      display: inline-block;
-      background-color: transparent;
-      color: $primary;
-      border: none;
-      height: 1.5rem;
-      text-align: center;
-      .material-icons {
-        pointer-events: none;
-      }
-    }
-    &_nav {
-      display: none;
-    }
-  }
+// // header
+// .header {
+//   padding: 1.75rem 0;
+//   &_menu {
+//     display: inline-block;
+//     background-color: transparent;
+//     color: $primary;
+//     border: none;
+//     height: 1.5rem;
+//     text-align: center;
+//     .material-icons {
+//       pointer-events: none;
+//     }
+//   }
+//   &_nav {
+//     display: none;
+//   }
+// }
 
-  // 開始動畫
-  .banner_animation {
-    text-align: left;
-    img {
-      width: 117px;
-    }
-  }
+// // 開始動畫
+// .banner_animation {
+//   text-align: left;
+//   img {
+//     width: 117px;
+//   }
+// }
 
-  // 服務
-  .service_txt {
-    flex-direction: column;
-    h3 {
-      br {
-        display: none;
-      }
-    }
-  }
+// // 服務
+// .service_txt {
+//   flex-direction: column;
+//   h3 {
+//     br {
+//       display: none;
+//     }
+//   }
+// }
 
-  // 合作
-  .cooperation_list {
-    &_item {
-      &:first-of-type {
-        margin-left: -5rem;
-      }
-    }
-  }
-  .recommend {
-    .card-group {
-      flex-wrap: nowrap;
-      justify-content: flex-start;
-      width: 351px;
-      margin: 0 auto;
-      gap: 0;
-      overflow: hidden;
-    }
+// // 合作
+// .cooperation_list {
+//   &_item {
+//     &:first-of-type {
+//       margin-left: -5rem;
+//     }
+//   }
+// }
+// .recommend {
+//   .card-group {
+//     flex-wrap: nowrap;
+//     justify-content: flex-start;
+//     width: 351px;
+//     margin: 0 auto;
+//     gap: 0;
+//     overflow: hidden;
+//   }
 
-    &_card {
-      flex: 0 0 100%;
-      margin-bottom: 1.5rem;
-      transition: transform 0.3s;
-    }
-    &_card.active {
-      transform: translateX(0);
-    }
-  }
-  // 推薦-輪播動畫的指示器
-  .recommend_indicator {
-    display: flex;
-    gap: 0.5rem;
-    height: 12px;
-    width: 44px;
-    margin: 0 auto;
+//   &_card {
+//     flex: 0 0 100%;
+//     margin-bottom: 1.5rem;
+//     transition: transform 0.3s;
+//   }
+//   &_card.active {
+//     transform: translateX(0);
+//   }
+// }
 
-    &_item {
-      margin: auto 0;
-      width: 8px;
-      height: 8px;
-      background-color: $black80;
-      border-radius: 100%;
-      cursor: pointer;
-    }
-    .active {
-      width: 12px;
-      height: 12px;
-      background-color: $primary;
-    }
-  }
+//   // 規則、問題
+//   .rule,
+//   .question {
+//     flex-direction: column;
+//   }
 
-  // 規則、問題
-  .rule,
-  .question {
-    flex-direction: column;
-  }
+//   // ai tool
+//   .bg-white {
+//     border-radius: 20px;
+//     .container {
+//       padding: 5rem 0.75rem;
+//     }
+//   }
 
-  // ai tool
-  .bg-white {
-    border-radius: 20px;
-    .container {
-      padding: 5rem 0.75rem;
-    }
-  }
-  .tool_filter {
-    flex-wrap: wrap;
-  }
-
-  // footer
-  .sitemap {
-    flex-direction: column-reverse;
-  }
-  .footer_bottom {
-    flex-wrap: wrap;
-    .social {
-      order: 3;
-      margin-left: 0;
-    }
-  }
-}
-@keyframes slideOutIn {
-  0% {
-    transform: translateY(110%);
-  }
-  30% {
-    transform: translateY(0%);
-  }
-  60% {
-    transform: translateY(0%);
-  }
-  70% {
-    transform: translateY(-110%);
-  }
-  100% {
-    transform: translateY(-110%);
-  }
-}
+//   // footer
+//   .sitemap {
+//     flex-direction: column-reverse;
+//   }
+//   .footer_bottom {
+//     flex-wrap: wrap;
+//     .social {
+//       order: 3;
+//       margin-left: 0;
+//     }
+//   }
+// }

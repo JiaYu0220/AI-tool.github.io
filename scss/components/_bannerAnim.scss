@@ -1,0 +1,49 @@
+.banner_animation {
+  text-align: right;
+  overflow: hidden;
+  white-space: nowrap;
+  img {
+    width: 180px;
+  }
+  @include pad {
+    text-align: center;
+    img {
+      max-width: 33%;
+    }
+  }
+}
+
+.pricing_banner_animation {
+  text-align: left;
+}
+
+.slideOutIn {
+  transform: translateY(110%);
+  &:nth-of-type(3) {
+    animation: slideOutIn 5s infinite;
+  }
+  &:nth-of-type(2) {
+    animation: slideOutIn 5s 0.2s infinite;
+  }
+  &:nth-of-type(1) {
+    animation: slideOutIn 5s 0.4s infinite;
+  }
+}
+
+@keyframes slideOutIn {
+  0% {
+    transform: translateY(110%);
+  }
+  30% {
+    transform: translateY(0%);
+  }
+  60% {
+    transform: translateY(0%);
+  }
+  70% {
+    transform: translateY(-110%);
+  }
+  100% {
+    transform: translateY(-110%);
+  }
+}

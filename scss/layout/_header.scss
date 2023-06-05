@@ -1,0 +1,60 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid $primary;
+  @include mobile {
+    padding: 1.75rem 0;
+  }
+}
+.header_nav {
+  display: flex;
+  align-items: center;
+  &_item {
+    padding-left: 1.25rem;
+  }
+  @include mobile {
+    display: none;
+  }
+}
+
+.header_mobile {
+  display: none;
+  position: relative;
+  &_btn {
+    background-color: transparent;
+    color: $primary;
+    border: none;
+    height: 1.5rem;
+    text-align: center;
+    .material-icons {
+      pointer-events: none;
+    }
+  }
+  &_menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    padding: 0.75rem 0;
+    margin-top: 4px;
+    white-space: nowrap;
+    background-color: $black100;
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.2);
+    border: 1px solid $primary;
+    border-radius: 16px;
+    &.show {
+      display: block;
+    }
+    &_item {
+      display: block;
+      padding: 0.5rem 2rem;
+
+      &:active {
+        background-color: $black80;
+      }
+    }
+  }
+  @include mobile {
+    display: inline-block;
+  }
+}
