@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 *,
 *::after,
 *::before {
@@ -56,62 +55,3 @@ a:hover {
 .icon-l {
   font-size: 5rem;
 }
-=======
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-body {
-  font-family: "Noto Sans TC", sans-serif;
-  background-color: $black100;
-  color: $primary;
-}
-a {
-  text-decoration: none;
-  color: $primary;
-  display: inline-block;
-  transition: 0.3s;
-}
-
-button {
-  transition: 0.3s;
-  cursor: pointer;
-}
-a:hover {
-  color: $black40;
-}
-
-.container {
-  max-width: 1296px;
-  margin: 0 auto;
-  padding: 0 0.75rem;
-}
-
-.logo {
-  max-width: 245px;
-  @include mobile {
-    width: 150px;
-  }
-}
-
-.material-icons {
-  vertical-align: sub;
-}
-
-//icon
-.icon-s {
-  font-size: 1rem;
-}
-.icon-m {
-  font-size: 1.5rem;
-}
-.icon-l {
-  font-size: 5rem;
-}
->>>>>>> d8d2b23ff3ce531c69b2b2c3ed0d2da62e7c0211
