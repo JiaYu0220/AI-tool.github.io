@@ -846,6 +846,11 @@ a:hover {
   top: 0;
   background: linear-gradient(90deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.9) 25%, rgba(0, 0, 0, 0));
 }
+@media (max-width: 768px) {
+  .cooperation_list::before, .cooperation_list::after {
+    background: linear-gradient(90deg, rgb(0, 0, 0), rgba(0, 0, 0, 0.5) 10%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0));
+  }
+}
 .cooperation_list::before {
   left: 0;
   padding-right: 196px;
@@ -858,11 +863,6 @@ a:hover {
 .cooperation_list img {
   max-width: 160px;
   height: 40px;
-}
-@media (max-width: 375px) {
-  .cooperation_list_item:first-of-type {
-    margin-left: -5rem;
-  }
 }
 
 .recommend_card {

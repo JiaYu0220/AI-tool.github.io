@@ -70,6 +70,15 @@
       rgba(0, 0, 0, 0.9) 25%,
       rgba(0, 0, 0, 0)
     );
+    @include pad {
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.5) 10%,
+        rgba(0, 0, 0, 0) 30%,
+        rgba(0, 0, 0, 0)
+      );
+    }
   }
   &::before {
     left: 0;
@@ -84,14 +93,6 @@
   img {
     max-width: 160px;
     height: 40px;
-  }
-
-  @include mobile {
-    &_item {
-      &:first-of-type {
-        margin-left: -5rem;
-      }
-    }
   }
 }
 
