@@ -168,9 +168,9 @@ a:hover {
 }
 
 .container {
-  max-width: 1296px;
+  max-width: 1320px;
   margin: 0 auto;
-  padding: 0 0.75rem;
+  padding: 0 12px;
 }
 
 .logo {
@@ -395,34 +395,16 @@ a:hover {
   box-shadow: 0 0 3px 5px #d1d1d1;
 }
 
-.btn-tool {
-  border: 1px solid #f2f2f2;
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-}
-.btn-tool:hover {
-  border: 1px solid #020202;
-}
-.btn-tool .material-icons {
-  margin-left: 0.75rem;
-}
-.btn-tool .icon-white {
-  background-color: #020202;
-  color: #fff;
-  padding: 2px;
-  border-radius: 2px;
-}
-
 .card-group {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
+  -moz-column-gap: 2%;
+       column-gap: 2%;
+  row-gap: 1.5rem;
 }
 @media (max-width: 375px) {
   .card-group {
-    gap: 0.75rem;
+    row-gap: 0.75rem;
   }
 }
 
@@ -430,8 +412,17 @@ a:hover {
   display: flex;
   flex-direction: column;
   width: 32%;
-  min-width: 351px;
   border-radius: 16px;
+}
+@media (max-width: 768px) {
+  .card {
+    width: 49%;
+  }
+}
+@media (max-width: 375px) {
+  .card {
+    width: 100%;
+  }
 }
 
 .sitemap {
@@ -602,6 +593,25 @@ a:hover {
   outline: none;
 }
 
+.btn-tool {
+  border: 1px solid #f2f2f2;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+.btn-tool:hover {
+  border: 1px solid #020202;
+}
+.btn-tool .material-icons {
+  margin-left: 0.75rem;
+}
+.btn-tool .icon-white {
+  background-color: #020202;
+  color: #fff;
+  padding: 2px;
+  border-radius: 2px;
+}
+
 .tool_filter {
   display: flex;
   justify-content: space-between;
@@ -696,6 +706,7 @@ a:hover {
   .tool_filter_type {
     order: 3;
     margin: 0 auto;
+    margin-top: 1rem;
     overflow-x: auto;
     /* 隱藏 x 軸 */
     /* Hide scrollbar for Chrome, Safari and Opera */
@@ -909,12 +920,12 @@ a:hover {
   margin-left: 0.75rem;
 }
 
-pricingner_subtitle {
+.pricing_banner_subtitle {
   width: 50%;
   margin-left: auto;
 }
 @media (max-width: 768px) {
-  pricingner_subtitle {
+  .pricing_banner_subtitle {
     width: 73%;
   }
 }
@@ -929,6 +940,11 @@ pricingner_subtitle {
 }
 .card-price:hover {
   border: 1px solid #fff;
+}
+@media (max-width: 768px) {
+  .card-price {
+    width: 100%;
+  }
 }
 
 .price_ai {

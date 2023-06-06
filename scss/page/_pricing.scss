@@ -1,4 +1,4 @@
-pricingner_subtitle {
+.pricing_banner_subtitle {
   width: 50%;
   margin-left: auto;
   @include pad {
@@ -15,6 +15,9 @@ pricingner_subtitle {
   }
   &:hover {
     border: 1px solid $primary;
+  }
+  @include pad {
+    width: 100%;
   }
 }
 .price_ai {

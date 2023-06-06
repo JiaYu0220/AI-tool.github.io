@@ -29,9 +29,9 @@ a:hover {
 }
 
 .container {
-  max-width: 1296px;
+  max-width: 1320px; //1296 + 24
   margin: 0 auto;
-  padding: 0 0.75rem;
+  padding: 0 12px;
 }
 
 .logo {
