@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "./utils/variables";
 @import "./utils/mixins";
 
@@ -17,3 +18,24 @@
 @import "./components/bannerAnim";
 @import "./components/button";
 @import "./components/card";
+=======
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./base/reset";
+@import "./base/base";
+@import "./base/typography";
+
+@import "./utils/utilities";
+
+@import "./layout/footer";
+@import "./layout/header";
+@import "./layout/tool";
+
+@import "./page/home";
+@import "./page/pricing";
+
+@import "./components/bannerAnim";
+@import "./components/button";
+@import "./components/card";
+>>>>>>> d8d2b23ff3ce531c69b2b2c3ed0d2da62e7c0211

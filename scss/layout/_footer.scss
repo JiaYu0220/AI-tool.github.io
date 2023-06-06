@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .sitemap {
   display: flex;
   justify-content: space-between;
@@ -51,3 +52,58 @@
     }
   }
 }
+=======
+.sitemap {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid $primary;
+  border-bottom: 1px solid $primary;
+  padding: 5rem 0;
+  p {
+    margin-bottom: 0.5rem;
+  }
+
+  @include mobile {
+    flex-direction: column-reverse;
+  }
+}
+
+.sitemap-cover {
+  justify-content: center;
+  align-items: center;
+  border-top: none;
+  padding: 12rem 6.75rem;
+}
+
+.footer_bottom {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+
+  .social {
+    margin-left: 6.25rem;
+    display: flex;
+    gap: 1.25rem;
+  }
+  .toTop {
+    margin-left: auto;
+    background-color: transparent;
+    color: $primary;
+    border: none;
+    &:hover {
+      color: $black40;
+    }
+    .material-icons {
+      margin-left: 0.75rem;
+    }
+  }
+
+  @include mobile {
+    flex-wrap: wrap;
+    .social {
+      order: 3;
+      margin-left: 0;
+    }
+  }
+}
+>>>>>>> d8d2b23ff3ce531c69b2b2c3ed0d2da62e7c0211

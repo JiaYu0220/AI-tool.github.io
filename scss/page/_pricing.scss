@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .pricing_banner_subtitle {
   width: 50%;
   margin-left: auto;
@@ -116,3 +117,123 @@
     }
   }
 }
+=======
+.pricing_banner_subtitle {
+  width: 50%;
+  margin-left: auto;
+  @include pad {
+    width: 73%;
+  }
+}
+
+.card-price {
+  width: 49%;
+  border: 1px solid $black80;
+  ul {
+    list-style: disc;
+    margin-left: 1.25rem;
+  }
+  &:hover {
+    border: 1px solid $primary;
+  }
+}
+.price_ai {
+  padding: 1.25rem 2rem;
+  flex-grow: 1;
+  h3 {
+    margin-bottom: 0.75rem;
+  }
+  ul {
+    padding-bottom: 8.5rem;
+  }
+}
+.price_cost {
+  border-top: 1px solid $black80;
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  &_tokens {
+    font-weight: 400;
+    color: $black60;
+  }
+
+  .material-icons {
+    margin-left: 0.75rem;
+  }
+}
+
+// 使用規則
+.rule {
+  display: flex;
+  h2 {
+    margin-right: 24%;
+    flex-shrink: 0;
+  }
+  &_item {
+    padding-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid $black80;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    h3 {
+      margin-bottom: 1.5rem;
+    }
+  }
+  @include mobile {
+    flex-direction: column;
+  }
+}
+
+// 常見問題
+.question {
+  display: flex;
+  h2 {
+    margin-right: 24%;
+    flex-shrink: 0;
+  }
+  ul {
+    flex-grow: 1;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+}
+.question_item {
+  display: flex;
+  padding: 1.25rem 2.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid $black80;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  &:hover {
+    border: 1px solid $primary;
+  }
+  &_txt {
+    margin-left: 1.25rem;
+  }
+  p {
+    margin-top: 1rem;
+  }
+  p,
+  .remove-icon {
+    display: none;
+  }
+  &.active {
+    border: 2px solid $primary;
+
+    .add-icon {
+      display: none;
+    }
+    p,
+    .remove-icon {
+      display: block;
+    }
+  }
+}
+>>>>>>> d8d2b23ff3ce531c69b2b2c3ed0d2da62e7c0211

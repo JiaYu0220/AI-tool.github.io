@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .bg-white {
   background: #fff;
   border-radius: 160px;
@@ -225,3 +226,232 @@
     vertical-align: top;
   }
 }
+=======
+.bg-white {
+  background: #fff;
+  border-radius: 160px;
+  color: $black100;
+  a {
+    color: $black100;
+  }
+
+  .container {
+    padding: 10rem 0.75rem;
+  }
+
+  @include mobile {
+    border-radius: 20px;
+    .container {
+      padding: 5rem 0.75rem;
+    }
+  }
+}
+.tool_title {
+  text-align: center;
+}
+.tool_search {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: $black20;
+  border-radius: 16px;
+  padding: 0 2.5rem;
+  color: $black60;
+  .material-icons {
+    margin-right: 0.75rem;
+  }
+
+  input {
+    width: 100%;
+    padding: 1.25rem 0;
+    border: none;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.tool_filter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include pad {
+    flex-wrap: wrap;
+  }
+}
+
+.tool_filter_all {
+  position: relative;
+  .icon-white {
+    color: $primary;
+    background: $black100;
+    padding: 2px;
+  }
+}
+
+.tool_filter_all_menu {
+  left: 0;
+  width: 240px;
+  display: none;
+  text-align: left;
+  position: absolute;
+  padding: 1.25rem 0;
+  margin-top: 4px;
+  background-color: $primary;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  &.show {
+    display: block;
+  }
+  &_title {
+    padding: 0.25rem 2.5rem;
+    cursor: default;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: $black60;
+    &:not(:first-of-type) {
+      border-top: 1px solid $black20;
+      padding-top: 1rem;
+      margin-top: 1rem;
+    }
+  }
+  &_ai,
+  &_type {
+    padding: 0.25rem 2.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+
+    &:hover {
+      background-color: $black20;
+    }
+    .check-icon {
+      display: none;
+    }
+    &.active .check-icon {
+      display: block;
+    }
+  }
+  @include mobile {
+    width: 351px;
+  }
+}
+
+.tool_filter_type {
+  display: flex;
+  a {
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    color: $black60;
+    border-radius: 16px;
+    transition: 0.3s;
+  }
+  a:hover,
+  .active {
+    background-color: $black20;
+    color: $black100;
+    font-weight: 700;
+  }
+  .active {
+    pointer-events: none;
+  }
+  a:active {
+    outline: 1px solid $black80;
+  }
+
+  @include pad {
+    order: 3;
+    margin: 0 auto;
+    overflow-x: auto;
+    /* 隱藏 x 軸 */
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    & {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+    li {
+      flex-shrink: 0;
+    }
+  }
+}
+.tool_filter_sort {
+  &_menu {
+    &:focus {
+      outline: none;
+    }
+    // &.show {
+    //   display: block;
+    // }
+    option {
+      padding: 0.25rem 2.5rem;
+      &:hover {
+        background-color: $black20;
+      }
+    }
+  }
+}
+
+.tool_card {
+  overflow: hidden; //讓圓角出來
+  border: 1px solid $black20;
+
+  &_img {
+    overflow: hidden; //防下方超過
+
+    img {
+      transition: 0.5s;
+      vertical-align: middle;
+    }
+  }
+  &:hover .tool_card_img img {
+    scale: 1.2;
+  }
+
+  &_body {
+    padding: 1.25rem 2rem;
+    flex-grow: 1;
+    h3 {
+      margin-bottom: 0.75rem;
+    }
+  }
+  &_ai,
+  &_tag {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.25rem 2rem;
+    border-top: 1px solid $black20;
+  }
+}
+
+.tool_page {
+  justify-content: flex-end;
+  display: flex;
+  column-gap: 0.25rem;
+
+  a {
+    width: 48px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 16px;
+    transition: 0.3s;
+  }
+  .page-active,
+  a:hover {
+    background: $black100;
+    color: $primary;
+  }
+  .page-active {
+    pointer-events: none;
+  }
+  .material-icons {
+    vertical-align: top;
+  }
+}
+>>>>>>> d8d2b23ff3ce531c69b2b2c3ed0d2da62e7c0211
