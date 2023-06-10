@@ -1,8 +1,18 @@
+// ---------- 開始使用 preventDefault ----------
+$(document).ready(() => {
+  $(".preventDefault").click((e) => {
+    e.preventDefault();
+  });
+});
+
 // ---------- 手機版 header 選單收合 ----------
 $(document).ready(() => {
   //點擊 btn 控制選單出現、消失
-  $(".header_mobile_btn").click(() => {
-    $(".header_mobile_menu").toggleClass("show");
+  $(".menu-icon").click(() => {
+    $(".mobile_menu").addClass("show");
+  });
+  $(".close-icon").click(() => {
+    $(".mobile_menu").removeClass("show");
   });
 });
 

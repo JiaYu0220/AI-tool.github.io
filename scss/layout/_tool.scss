@@ -93,6 +93,7 @@
   margin-top: 4px;
   background-color: $primary;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1;
   &.show {
     display: block;
   }
@@ -175,12 +176,24 @@
 }
 .tool_filter_sort {
   &_menu {
+    /*移除箭頭樣式*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    padding-right: 3.75rem;
+    /*改變右邊箭頭樣式*/
+    background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/keyboard%20arrow%20down.png?raw=true")
+      no-repeat 78% 50%;
+
     &:focus {
       outline: none;
     }
-    // &.show {
-    //   display: block;
-    // }
+    &:hover {
+      /*覆蓋住 .btn 的 background 設定*/
+      background: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2023web-camp/icons/keyboard%20arrow%20down.png?raw=true")
+        no-repeat 78% 50%;
+    }
+
     option {
       padding: 0.25rem 2.5rem;
       &:hover {

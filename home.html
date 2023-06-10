@@ -26,7 +26,7 @@
       <!-- header layout -->
       <div class="header mb-2t">
         <h1 class="logo">
-          <a href="#"
+          <a href="./home.html"
             ><img
               src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png"
               alt="AI 工具王"
@@ -41,18 +41,48 @@
           </li>
         </ul>
         <!-- 手機板才出現 -->
-        <div class="header_mobile">
-          <button class="header_mobile_btn" type="button">
+        <div class="mobile">
+          <button class="mobile_btn menu-icon" type="button">
             <span class="material-icons"> menu </span>
           </button>
-          <ul class="header_mobile_menu text-m">
-            <li>
-              <a class="header_mobile_menu_item" href="./home.html">首頁</a>
-            </li>
-            <li>
-              <a class="header_mobile_menu_item" href="./price.html">定價</a>
-            </li>
-          </ul>
+          <div class="container mobile_menu">
+            <div class="header">
+              <h1 class="logo">
+                <a href="./home.html"
+                  ><img
+                    src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png"
+                    alt="logo"
+                /></a>
+              </h1>
+              <button class="mobile_btn close-icon">
+                <span class="material-icons icon-m"> close </span>
+              </button>
+            </div>
+
+            <section class="mobile_menu_main">
+              <ul class="mobile_menu_main_list title-l">
+                <li>
+                  <a href="./home.html">首頁</a>
+                </li>
+                <li>
+                  <p href="./price.html">定價</p>
+                </li>
+              </ul>
+            </section>
+            <section class="footer_bottom">
+              <div class="text-m-bold mb-sm-2h">AI工具王 &copy; 2023</div>
+              <ul class="social text-m-bold">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+              </ul>
+              <button class="toTop text-m-bold mb-sm-2h">
+                Back to top<span class="material-icons icon-s">
+                  arrow_upward
+                </span>
+              </button>
+            </section>
+          </div>
         </div>
       </div>
 
@@ -63,7 +93,9 @@
           <h2 class="mb-2t title-xl title-sm-l banner_title">
             透過<br />AI 工具王的<br />強大模型<br />讓您的業務更聰明
           </h2>
-          <a href="#" class="mb-6h btn title-xs mb-sm-11">開始使用 </a>
+          <a href="#" class="mb-6h btn title-xs mb-sm-11 preventDefault"
+            >開始使用</a
+          >
           <div class="banner_animation">
             <img
               src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/deco.png"
@@ -577,7 +609,7 @@
           <h2 class="title-m mb-2t title-sm-m mb-sm-2">
             現在就來建立屬於你的服務吧
           </h2>
-          <a class="btn title-xs" href="#">
+          <a class="btn title-xs preventDefault" href="#">
             開始使用
             <span class="material-icons icon-m"> call_made </span>
           </a>
@@ -594,7 +626,7 @@
             </li>
           </ul>
           <div class="logo mb-2t">
-            <a href="#"
+            <a href="./home.html"
               ><img
                 src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png"
                 alt="logo"
@@ -602,13 +634,13 @@
           </div>
         </section>
         <section class="footer_bottom">
-          <h5 class="text-m-bold mb-sm-2">AI工具王 &copy; 2023</h5>
+          <h5 class="text-m-bold mb-sm-2h">AI工具王 &copy; 2023</h5>
           <ul class="social text-m-bold">
             <li><a href="#">Facebook</a></li>
             <li><a href="#">Twitter</a></li>
             <li><a href="#">Instagram</a></li>
           </ul>
-          <button class="toTop text-m-bold mb-sm-2" type="button">
+          <button class="toTop text-m-bold mb-sm-2h" type="button">
             Back to top<span class="material-icons icon-s"> arrow_upward </span>
           </button>
         </section>

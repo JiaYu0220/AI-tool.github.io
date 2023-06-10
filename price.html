@@ -26,7 +26,7 @@
       <!-- header layout -->
       <div class="header mb-2t">
         <h1 class="logo">
-          <a href="#"
+          <a href="./home.html"
             ><img
               src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png"
               alt="logo"
@@ -39,18 +39,48 @@
           <li class="header_nav_item"><p>定價</p></li>
         </ul>
         <!-- 手機板才出現 -->
-        <div class="header_mobile">
-          <button class="header_mobile_btn" type="button">
+        <div class="mobile">
+          <button class="mobile_btn menu-icon" type="button">
             <span class="material-icons"> menu </span>
           </button>
-          <ul class="header_mobile_menu">
-            <li>
-              <a class="header_mobile_menu_item" href="./home.html">首頁</a>
-            </li>
-            <li>
-              <a class="header_mobile_menu_item" href="./price.html">定價</a>
-            </li>
-          </ul>
+          <div class="container mobile_menu">
+            <div class="header">
+              <h1 class="logo">
+                <a href="./home.html"
+                  ><img
+                    src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png"
+                    alt="logo"
+                /></a>
+              </h1>
+              <button class="mobile_btn close-icon">
+                <span class="material-icons icon-m"> close </span>
+              </button>
+            </div>
+
+            <section class="mobile_menu_main">
+              <ul class="mobile_menu_main_list title-l">
+                <li>
+                  <a href="./home.html">首頁</a>
+                </li>
+                <li>
+                  <p href="./price.html">定價</p>
+                </li>
+              </ul>
+            </section>
+            <section class="footer_bottom">
+              <div class="text-m-bold mb-sm-2h">AI工具王 &copy; 2023</div>
+              <ul class="social text-m-bold">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+              </ul>
+              <button class="toTop text-m-bold mb-sm-2h">
+                Back to top<span class="material-icons icon-s">
+                  arrow_upward
+                </span>
+              </button>
+            </section>
+          </div>
         </div>
       </div>
 
@@ -541,7 +571,7 @@
             </li>
           </ul>
           <div class="logo mb-2t">
-            <a href="#"
+            <a href="./home.html"
               ><img
                 src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/2023web-camp/logo.png"
                 alt="logo"
@@ -549,13 +579,13 @@
           </div>
         </section>
         <section class="footer_bottom">
-          <h5 class="text-m-bold mb-sm-2">AI工具王 &copy; 2023</h5>
+          <h5 class="text-m-bold mb-sm-2h">AI工具王 &copy; 2023</h5>
           <ul class="social text-m-bold">
             <li><a href="#">Facebook</a></li>
             <li><a href="#">Twitter</a></li>
             <li><a href="#">Instagram</a></li>
           </ul>
-          <button class="toTop text-m-bold mb-sm-2" type="button">
+          <button class="toTop text-m-bold mb-sm-2h" type="button">
             Back to top<span class="material-icons icon-s"> arrow_upward </span>
           </button>
         </section>
